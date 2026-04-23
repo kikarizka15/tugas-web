@@ -149,74 +149,22 @@ A^{-1}=\frac{1}{-23}
 
 <h2>5. Invers Matriks 3x3 (Metode Adjoin)</h2>
 
-<p>\[
-A=\begin{pmatrix}
-0 & 2 & -3\\
-1 & -2 & -1\\
-0 & 0 & 1
-\end{pmatrix}
-\]</p>
+<p>\[ A = \begin{pmatrix} 0 & 2 & -3 \\ 1 & -2 & -1 \\ 0 & 0 & 1 \end{pmatrix} \]</p>
 
-<p>Langkah 1: Determinan</p>
-<p>\[
-\det(A)=-2
-\]</p>
+<p><strong>Langkah 1: Determinan</strong></p>
+<p>Ekspansi baris ke-3:</p>
+<p>\[ \det(A) = 1 \begin{vmatrix} 0 & 2 \\ 1 & -2 \end{vmatrix} = 1(0 - 2) = -2 \]</p>
 
-<p>Langkah 2: Matriks Minor</p>
+<p><strong>Langkah 2: Matriks Kofaktor</strong></p>
+<p>\[ C = \begin{pmatrix} -2 & -1 & 0 \\ -2 & 0 & 0 \\ -8 & -3 & -2 \end{pmatrix} \]</p>
 
-<p>\[
-M_{11}=\begin{vmatrix}-2 & -1\\0 & 1\end{vmatrix}=-2
-\]</p>
+<p><strong>Langkah 3: Adjoin (Transpose Kofaktor)</strong></p>
+<p>\[ \text{adj}(A) = \begin{pmatrix} -2 & -2 & -8 \\ -1 & 0 & -3 \\ 0 & 0 & -2 \end{pmatrix} \]</p>
 
-<p>\[
-M_{12}=\begin{vmatrix}1 & -1\\0 & 1\end{vmatrix}=1
-\]</p>
-
-<p>\[
-M_{13}=\begin{vmatrix}1 & -2\\0 & 0\end{vmatrix}=0
-\]</p>
-
-<p>Langkah 3: Matriks Kofaktor</p>
-
-<p>\[
-C=
-\begin{pmatrix}
--2 & -1 & 0\\
-2 & 0 & 0\\
--5 & -3 & -2
-\end{pmatrix}
-\]</p>
-
-<p>Langkah 4: Adjoin (transpose)</p>
-
-<p>\[
-\text{adj}(A)=
-\begin{pmatrix}
--2 & 2 & -5\\
--1 & 0 & -3\\
-0 & 0 & -2
-\end{pmatrix}
-\]</p>
-
-<p>Langkah 5: Invers</p>
-
-<p>\[
-A^{-1}=\frac{1}{-2}
-\begin{pmatrix}
--2 & 2 & -5\\
--1 & 0 & -3\\
-0 & 0 & -2
-\end{pmatrix}
-\]</p>
-
-<p>\[
-=
-\begin{pmatrix}
-1 & -1 & \frac{5}{2}\\
-\frac{1}{2} & 0 & \frac{3}{2}\\
-0 & 0 & 1
-\end{pmatrix}
-\]</p>
+<p><strong>Langkah 4: Invers</strong></p>
+<p>\[ A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A) \]</p>
+<p>\[ A^{-1} = \frac{1}{-2} \begin{pmatrix} -2 & -2 & -8 \\ -1 & 0 & -3 \\ 0 & 0 & -2 \end{pmatrix} \]</p>
+<p>\[ A^{-1} = \begin{pmatrix} 1 & 1 & 4 \\ 0.5 & 0 & 1.5 \\ 0 & 0 & 1 \end{pmatrix} \]</p>
 
 <h2>6. Invers Matriks 4x4</h2>
 
@@ -245,7 +193,7 @@ A=
 <p>Langkah 2: Kesimpulan</p>
 
 <p>\[
-A^{-1} \text{ tidak ada karena determinan = 0}
+A^{-1} \text{ tidak ada karena determinan = 0 dan disebut Matriks Singular}
 \]</p>
 
 </body>
