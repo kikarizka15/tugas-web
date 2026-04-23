@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Determinant Matriks</title>
-
-    <!-- MathJax -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
-<h1>Penyelesaian Determinan Matriks</h1>
+<h1>Menghitung determinan matrik dengan menggunakan rumus expansi baris</h1>
 
-<h2>Diketahui</h2>
-<p>
-\[
-A = \begin{bmatrix}
--7 & -5 \\
-1 & 4
-\end{bmatrix}
-\]
-</p>
+<h2>1. Determinan Matriks 2x2</h2>
 
-<h2>Rumus</h2>
-<p>
-\[
-\det(A) = ad - bc
-\]
-</p>
+<p>\[
+A=\begin{pmatrix}-7 & -5 \\ 1 & 4\end{pmatrix}
+\]</p>
 
-<h2>Langkah Penyelesaian</h2>
-<p>
-\[
-\det(A) = (-7)(4) - (-5)(1)
-\]
-</p>
+<p>Rumus:</p>
+<p>\[
+\det(A)=ad-bc
+\]</p>
 
-<p>
-\[
-= -28 - (-5)
-\]
-</p>
+<p>Perhitungan:</p>
+<p>\[
+\det(A)=(-7)(4)-(-5)(1)
+\]</p>
 
-<p>
-\[
-= -28 + 5
-\]
-</p>
+<p>\[
+=-28+5=-23
+\]</p>
 
-<p>
-\[
-= -23
-\]
-</p>
-
-<h2>Hasil</h2>
-<p>
-\[
-\det(A) = -23
-\]
-</p>
-
-<h1>Evaluasi Determinan dan Invers</h1>
-
-    <div class="problem">
-        <h2>Soal 1 (Matriks 2x2)</h2>
-        <p>Matriks \( A = \begin{bmatrix} -7 & -5 \\ 1 & 4 \end{bmatrix} \)</p>
-        <p><strong>Determinan:</strong> \( \det(A) = (-7 \cdot 4) - (-5 \cdot 1) = -23 \)</p>
-        <p><strong>Adjoin:</strong> \( \text{adj}(A) = \begin{bmatrix} 4 & 5 \\ -1 & -7 \end{bmatrix} \)</p>
-        <p><strong>Invers:</strong> \( A^{-1} = \frac{1}{-23} \begin{bmatrix} 4 & 5 \\ -1 & -7 \end{bmatrix} \)</p>
-    </div>
-
-    <div class="problem">
-        <h2>Soal 2 (Matriks 3x3)</h2>
-        <p>Matriks \( A = \begin{bmatrix} 0 & 2 & -3 \\ 1 & -2 & -1 \\ 0 & 0 & 1 \end{bmatrix} \)</p>
-        <p><strong>Determinan:</strong> \( \det(A) = -2 \)</p>
-        <p><strong>Adjoin:</strong> \( \text{adj}(A) = \begin{bmatrix} -2 & -2 & -8 \\ -1 & 0 & -3 \\ 0 & 0 & -2 \end{bmatrix} \)</p>
-        <p><strong>Invers:</strong> \( A^{-1} = \begin{bmatrix} 1 & 1 & 4 \\ 0.5 & 0 & 1.5 \\ 0 & 0 & 1 \end{bmatrix} \)</p>
-    </div>
-
-    <div class="problem">
-        <h2>Soal 3 (Matriks 4x4)</h2>
-        <p>Matriks ini memiliki jumlah elemen baris yang sama dengan nol (\( \sum \text{baris} = 0 \)).</p>
-        <p>Oleh karena itu, <strong>\( \det(A) = 0 \)</strong>.</p>
-        <p><strong>Kesimpulan:</strong> Matriks singular, tidak memiliki invers.</p>
-    </div>
+<h2>2. Determinan Matriks 3x3</h2>   
     
+<p>\[
+A=\begin{pmatrix}
+0 & 2 & -3\\
+1 & -2 & -1\\
+0 & 0 & 1
+\end{pmatrix}
+\]</p>
+
+<p>Ekspansi baris pertama:</p>
+
+<p>\[
+\det(A)=0 + (-1)^{1+2}(2)
+\begin{vmatrix}1 & -1\\0 & 1\end{vmatrix}
++ (-1)^{1+3}(-3)
+\begin{vmatrix}1 & -2\\0 & 0\end{vmatrix}
+\]</p>
+
+<p>Hitung minor:</p>
+
+<p>\[
+= (-1)(2)(1\cdot1-(-1)\cdot0) + (1)(-3)(0)
+\]</p>
+
+<p>\[
+=-2
+\]</p>
+
+<h2>3. Determinan Matriks 4x4</h2>
+
+<p>\[
+A=
+\begin{pmatrix}
+1 & -3 & 1 & 1\\
+-3 & 1 & 1 & 1\\
+1 & 1 & -3 & 1\\
+1 & 1 & 1 & -3
+\end{pmatrix}
+\]</p>
+
+<p>Jumlah setiap baris:</p>
+
+<p>\[
+1-3+1+1=0
+\]</p>
+
+<p>Karena ada baris yang saling bergantung (linear dependent):</p>
+
+<p>\[
+\det(A)=0
+\]</p>
+
+<h1>Menggunakan rumus matriks adjoin untuk menghitung invers dari matriks berikut dengan rumus</h1>
+
 </body>
 </html>
